@@ -1,7 +1,7 @@
 import "./globals.css";
-import { Figtree, Cormorant_Garamond } from "next/font/google";
+import { Manrope, Cormorant_Garamond } from "next/font/google";
 
-const figtree = Figtree({
+const body = Manrope({
   subsets: ["latin", "cyrillic"],
   variable: "--font-body"
 });
@@ -20,10 +20,10 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="ru" className={`${figtree.variable} ${display.variable}`}>
+    <html lang="ru" className={`${body.variable} ${display.variable}`}>
       <body
         style={{
-          fontFamily: "var(--font-body), Figtree, system-ui, sans-serif"
+          fontFamily: "var(--font-body), Manrope, system-ui, sans-serif"
         }}
       >
         {children}
